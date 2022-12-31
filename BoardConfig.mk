@@ -24,7 +24,7 @@ PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig rk356x.config
 
 # BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address
-PRODUCT_BOOT_DEVICE := ff870000.sdhci
+PRODUCT_BOOT_DEVICE := ff870000.mmc
 
 SF_PRIMARY_DISPLAY_ORIENTATION := 0
 
