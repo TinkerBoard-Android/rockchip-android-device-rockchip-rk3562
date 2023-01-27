@@ -16,7 +16,7 @@
 include device/rockchip/rk3562/BoardConfig.mk
 BUILD_WITH_GO_OPT := true
 PRODUCT_UBOOT_CONFIG := rk3562
-PRODUCT_KERNEL_DTS := rk3562-rk817-tablet
+PRODUCT_KERNEL_DTS := rk3562-rk817-tablet-v10
 CAMERA_SUPPORT_AUTOFOCUS := true
 
 BOARD_USES_AB_IMAGE := false
