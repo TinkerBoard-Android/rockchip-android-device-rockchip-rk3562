@@ -18,17 +18,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PROPERTY_OVERRIDES += \
     debug.hwui.use_partial_updates=false
 
-BOARD_SEPOLICY_DIRS += vendor/rockchip/hardware/interfaces/neuralnetworks/1.0/default/sepolicy
-PRODUCT_PACKAGES += \
-    public.libraries-rockchip \
-    librknn_api_android \
-    rknn_server \
-    librknnhal_bridge.rockchip \
-    rockchip.hardware.neuralnetworks@1.0-impl \
-    rockchip.hardware.neuralnetworks@1.0-service
-
-$(call inherit-product-if-exists, vendor/rockchip/common/npu/npu.mk)
-
 TARGET_SYSTEM_PROP += device/rockchip/rk3562/rk3562.prop
 # enable this for support f2fs with data partion
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
