@@ -57,7 +57,9 @@ PRODUCT_COPY_FILES += vendor/rockchip/common/phone/etc/spn-conf.xml:system/etc/s
 PRODUCT_PROPERTY_OVERRIDES += \
     ro.product.ota.host = 192.168.1.1:8888 \
     ro.vendor.sdkversion = $(CURRENT_SDK_VERSION) \
-    vendor.gralloc.disable_afbc = 0
+    vendor.gralloc.disable_afbc = 0 \
+    vendor.gralloc.no_afbc_for_fb_target_layer=1 \
+    vendor.gralloc.no_afbc_for_sf_client_layer=1
 
 PRODUCT_COPY_FILES += \
     $(LOCAL_PATH)/public.libraries.txt:vendor/etc/public.libraries.txt
