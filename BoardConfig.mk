@@ -20,7 +20,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 PRODUCT_UBOOT_CONFIG ?= rk3562
 PRODUCT_KERNEL_ARCH ?= arm64
 PRODUCT_KERNEL_DTS ?= rk3562-evb1-lp4x-v10
-PRODUCT_KERNEL_CONFIG ?= rockchip_defconfig rk356x.config
+PRODUCT_KERNEL_CONFIG += rk356x.config
 
 # BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address
