@@ -13,21 +13,21 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include device/rockchip/rk3562/BoardConfig.mk
+BUILD_WITH_GO_OPT := false
 
-PRODUCT_MAKEFILES := \
-        $(LOCAL_DIR)/rk3562_tgo/rk3562_tgo.mk \
-        $(LOCAL_DIR)/rk3562_32bit/rk3562_32bit.mk \
-        $(LOCAL_DIR)/rk3562_t/rk3562_t.mk \
-        $(LOCAL_DIR)/rk3562_u/rk3562_u.mk
+PRODUCT_UBOOT_CONFIG := rk3562
+PRODUCT_KERNEL_DTS := rk3562-evb1-lp4x-v10
+BOARD_GSENSOR_MXC6655XA_SUPPORT := true
+BOARD_CAMERA_SUPPORT_EXT := true
+BOARD_HS_ETHERNET := true
 
-COMMON_LUNCH_CHOICES := \
-    rk3562_tgo-userdebug \
-    rk3562_tgo-user \
-    rk3562_32bit-userdebug \
-    rk3562_32bit-user \
-    rk3562_t-userdebug \
-    rk3562_t-user \
-    rk3562_u-userdebug \
-    rk3562_u-user
+# AB image definition
+BOARD_USES_AB_IMAGE := false
+BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
+BOARD_ROCKCHIP_VIRTUAL_AB_COMPRESSION_WITH_GKI_ENABLE := false
 
-
+ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
+    include device/rockchip/common/BoardConfig_AB.mk
+    TARGET_RECOVERY_FSTAB := device/rockchip/rk3562/rk3562_u/recovery.fstab_AB
+endif
