@@ -14,10 +14,6 @@ PRODUCT_PACKAGES += \
 PRODUCT_PACKAGES += \
     RockchipPinnerService
 
-# Disable partial updates
-PRODUCT_PROPERTY_OVERRIDES += \
-    debug.hwui.use_partial_updates=false
-
 TARGET_SYSTEM_PROP += device/rockchip/rk3562/rk3562.prop
 # enable this for support f2fs with data partion
 BOARD_USERDATAIMAGE_FILE_SYSTEM_TYPE := f2fs
