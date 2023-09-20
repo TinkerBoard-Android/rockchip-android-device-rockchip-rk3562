@@ -14,13 +14,13 @@
 # limitations under the License.
 #
 
-# First lunching is T, api_level is 33
+# First lunching is U, api_level is 34
 PRODUCT_SHIPPING_API_LEVEL := 33
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_SDMMC_DEVICE := ff880000.mmc
 
 include device/rockchip/common/build/rockchip/DynamicPartitions.mk
-include device/rockchip/rk3562/rk3562_tgo/BoardConfig.mk
+include device/rockchip/rk3562/rk3562_ugo/BoardConfig.mk
 include device/rockchip/common/BoardConfig.mk
 $(call inherit-product, device/rockchip/rk3562/device.mk)
 $(call inherit-product, device/rockchip/common/device.mk)
@@ -29,10 +29,10 @@ DEVICE_PACKAGE_OVERLAYS += $(LOCAL_PATH)/overlay
 
 PRODUCT_CHARACTERISTICS := tablet
 
-PRODUCT_NAME := rk3562_tgo
-PRODUCT_DEVICE := rk3562_tgo
+PRODUCT_NAME := rk3562_ugo
+PRODUCT_DEVICE := rk3562_ugo
 PRODUCT_BRAND := rockchip
-PRODUCT_MODEL := rk3562_tgo
+PRODUCT_MODEL := rk3562_ugo
 PRODUCT_MANUFACTURER := rockchip
 PRODUCT_AAPT_PREF_CONFIG := hdpi
 
