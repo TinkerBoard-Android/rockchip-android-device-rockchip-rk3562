@@ -13,20 +13,12 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include device/rockchip/rk3562/BoardConfig.mk
+BOARD_BUILD_GKI := true
 BUILD_WITH_GO_OPT := false
 
-PRODUCT_UBOOT_CONFIG := rk3562
 PRODUCT_KERNEL_DTS := rk3562-evb1-lp4x-v10
 BOARD_GSENSOR_MXC6655XA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_HS_ETHERNET := true
 
-# AB image definition
-BOARD_USES_AB_IMAGE := false
-BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
-BOARD_ROCKCHIP_VIRTUAL_AB_COMPRESSION_WITH_GKI_ENABLE := false
-
-ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-    include device/rockchip/common/BoardConfig_AB.mk
-endif
+include device/rockchip/rk3562/BoardConfig.mk

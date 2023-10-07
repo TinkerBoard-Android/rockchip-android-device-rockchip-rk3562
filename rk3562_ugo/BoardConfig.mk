@@ -13,15 +13,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
-include device/rockchip/rk3562/BoardConfig.mk
 BUILD_WITH_GO_OPT := true
-PRODUCT_UBOOT_CONFIG := rk3562
 PRODUCT_KERNEL_DTS := rk3562-rk817-tablet-v10
 CAMERA_SUPPORT_AUTOFOCUS := true
-
-BOARD_USES_AB_IMAGE := false
-BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
-
-ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-  include device/rockchip/common/BoardConfig_AB.mk
-endif
+BOARD_BUILD_GKI := true
+include device/rockchip/rk3562/BoardConfig.mk
