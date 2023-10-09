@@ -15,7 +15,7 @@
 #
 
 # First lunching is U, api_level is 34
-PRODUCT_SHIPPING_API_LEVEL := 33
+PRODUCT_SHIPPING_API_LEVEL := 34
 PRODUCT_DTBO_TEMPLATE := $(LOCAL_PATH)/dt-overlay.in
 PRODUCT_SDMMC_DEVICE := ff880000.mmc
 
