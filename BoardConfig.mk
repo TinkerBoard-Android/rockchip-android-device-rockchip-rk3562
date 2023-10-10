@@ -38,6 +38,9 @@ TARGET_RK_GRALLOC_AIDL := true
 TARGET_RK_GRALLOC_VERSION := 4
 BOARD_USE_DRM := true
 
+# Use otg
+ROCKCHIP_USB_OTG := true
+
 # Use Vulkan Skia
 TARGET_USES_VULKAN := true
 
