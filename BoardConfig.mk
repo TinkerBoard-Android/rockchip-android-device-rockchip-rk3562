@@ -22,21 +22,6 @@ PRODUCT_KERNEL_ARCH ?= arm64
 PRODUCT_KERNEL_DTS ?= rk3562-evb1-lp4x-v10
 PRODUCT_KERNEL_CONFIG += rk356x.config
 
-ifeq ($(strip $(BOARD_BUILD_GKI)), true)
-    # AB image definition
-    BOARD_USES_AB_IMAGE := true
-    BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := true
-    BOARD_ROCKCHIP_VIRTUAL_AB_COMPRESSION_WITH_GKI_ENABLE := true
-else
-    BOARD_USES_AB_IMAGE := false
-    BOARD_ROCKCHIP_VIRTUAL_AB_ENABLE := false
-    BOARD_ROCKCHIP_VIRTUAL_AB_COMPRESSION_WITH_GKI_ENABLE := false
-endif
-
-ifeq ($(strip $(BOARD_USES_AB_IMAGE)), true)
-    include device/rockchip/common/BoardConfig_AB.mk
-endif
-
 # BOARD_AVB_ENABLE := true
 # used for fstab_generator, sdmmc controller address
 PRODUCT_BOOT_DEVICE := ff870000.mmc
