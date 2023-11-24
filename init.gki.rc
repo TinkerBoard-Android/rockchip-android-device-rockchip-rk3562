@@ -1,0 +1,5 @@
+
+on init
+    write /sys/devices/platform/fe500000.usb/power/control auto
+    write /sys/devices/platform/fe500000.usb/power/autosuspend_delay_ms 1000
+
