@@ -13,6 +13,7 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 #
+include device/rockchip/rk3562/BoardConfig.mk
 BOARD_BUILD_GKI := true
 BUILD_WITH_GO_OPT := false
 
@@ -21,4 +22,10 @@ BOARD_GSENSOR_MXC6655XA_SUPPORT := true
 BOARD_CAMERA_SUPPORT_EXT := true
 BOARD_HS_ETHERNET := true
 
-include device/rockchip/rk3562/BoardConfig.mk
+#64-bit only
+DEVICE_IS_64BIT_ONLY := true
+TARGET_2ND_ARCH :=
+TARGET_2ND_ARCH_VARIANT :=
+TARGET_2ND_CPU_ABI :=
+TARGET_2ND_CPU_ABI2 :=
+TARGET_2ND_CPU_VARIANT :=
