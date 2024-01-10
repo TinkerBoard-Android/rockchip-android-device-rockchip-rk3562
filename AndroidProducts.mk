@@ -16,15 +16,12 @@
 
 PRODUCT_MAKEFILES := \
         $(LOCAL_DIR)/rk3562_ugo/rk3562_ugo.mk \
-        $(LOCAL_DIR)/rk3562_32bit/rk3562_32bit.mk \
         $(LOCAL_DIR)/rk3562_t/rk3562_t.mk \
         $(LOCAL_DIR)/rk3562_u/rk3562_u.mk
 
 COMMON_LUNCH_CHOICES := \
     rk3562_ugo-userdebug \
     rk3562_ugo-user \
-    rk3562_32bit-userdebug \
-    rk3562_32bit-user \
     rk3562_t-userdebug \
     rk3562_t-user \
     rk3562_u-userdebug \
